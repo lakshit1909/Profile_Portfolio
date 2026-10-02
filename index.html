@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Griffin - Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f3f2ef;
+            color: #191919;
+            line-height: 1.5;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .cover-banner {
+            height: 160px;
+            background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+            background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .profile-header-content {
+            padding: 0 24px 20px 24px;
+            position: relative;
+        }
+
+        .avatar-wrapper {
+            margin-top: -65px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .profile-avatar {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .user-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #191919;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .verified-icon {
+            color: #0a66c2;
+            font-size: 1rem;
+        }
+
+        .user-headline {
+            font-size: 0.95rem;
+            color: #333333;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        .user-location {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-block {
+            padding: 20px 24px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #191919;
+            margin-bottom: 10px;
+        }
+
+        .about-text {
+            font-size: 0.92rem;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        .social-bar {
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0a66c2;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .social-link:hover {
+            background-color: #e8f3ff;
+            border-color: #0a66c2;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 0;
+            }
+
+            .profile-card {
+                border-radius: 0;
+                border: none;
+            }
+
+            .profile-header-content, .section-block {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .cover-banner {
+                height: 120px;
+            }
+
+            .avatar-wrapper {
+                margin-top: -50px;
+            }
+
+            .profile-avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .social-bar {
+                flex-direction: column;
+            }
+
+            .social-link {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="profile-card">
+
+        <div class="cover-banner"></div>
+
+        <header class="profile-header-content">
+            <div class="avatar-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Peter_Griffin.png" 
+                     alt="Peter Griffin Profile Avatar" 
+                     class="profile-avatar"
+                     onerror="this.onerror=null; this.src='https://placehold.co/128x128/0a66c2/ffffff?text=PG';">
+            </div>
+
+            <h1 class="user-name">
+                Peter Griffin 
+                <i class="fa-solid fa-circle-check verified-icon" title="Verified Profile"></i>
+            </h1>
+
+            <p class="user-headline">
+                Professional idiot. Part-time employee. Full-time family man. I make questionable decisions so you don't have to.
+            </p>
+
+            <p class="user-location">
+                <i class="fa-solid fa-location-dot"></i> Quahog, Rhode Island
+            </p>
+        </header>
+
+        <section class="section-block">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">
+                Hey there! I'm Peter Griffin, a highly experienced employee at the Pawtucket Patriot Brewery and an expert in doing things the hard way. When I'm not working, I enjoy hanging out with my family, drinking beer at The Drunken Clam, and getting myself into situations that could have been avoided with approximately 5 seconds of common sense. My greatest skills include surviving my own decisions, making friends, and confidently pretending I know what I'm doing. My long-term goal is to become a billionaire, although my current financial strategy is mostly buying beer.
+            </p>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Connect & Links</h2>
+            <div class="social-bar">
+                <a href="https://www.linkedin.com/in/lakshit-patni-2557a33a3/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/lakshit1909" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.instagram.com/lakshit_patni/?hl=en" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
